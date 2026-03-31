@@ -6,5 +6,5 @@ RUN mvn -f /home/app/pom.xml clean package
 # Create an Image
 FROM eclipse-temurin:17-jdk-alpine
 EXPOSE 5000
-COPY /home/app/target/hello-world-java.jar hello-world-java.jar
+COPY target/*.jar app.jar
 ENTRYPOINT ["sh", "-c", "java -jar /hello-world-java.jar"]
